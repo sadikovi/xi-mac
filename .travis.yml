@@ -17,7 +17,8 @@ before_script:
   - sudo gem install xcpretty
 
 script:
-  - xcodebuild test -scheme XiEditor | xcpretty -s && exit ${PIPESTATUS[0]}
+  # - xcodebuild test -scheme XiEditor | xcpretty -s && exit ${PIPESTATUS[0]}
+  xcodebuild
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - ls -alh .

@@ -20,10 +20,13 @@ script:
   # - xcodebuild test -scheme XiEditor | xcpretty -s && exit ${PIPESTATUS[0]}
   xcodebuild
 
+before_deploy:
+  - zip XiEditor.zip /Users/travis/build/sadikovi/xi-mac/build/Release/XiEditor.app
+
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file: /Users/travis/build/sadikovi/xi-mac/build/Release/XiEditor.app
+  file: XiEditor.zip
   skip_cleanup: true
   overwrite: true
   on:

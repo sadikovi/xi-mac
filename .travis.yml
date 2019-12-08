@@ -23,7 +23,7 @@ script:
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file: "build/Release/XiEditor.app"
+  file: /Users/travis/build/sadikovi/xi-mac/build/Release/XiEditor.app
   skip_cleanup: true
   overwrite: true
   on:

@@ -21,7 +21,7 @@ script:
   xcodebuild
 
 before_deploy:
-  - zip XiEditor.zip /Users/travis/build/sadikovi/xi-mac/build/Release/XiEditor.app
+  - zip -r XiEditor.zip build/Release
 
 deploy:
   provider: releases
